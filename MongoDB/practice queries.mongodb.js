@@ -1,5 +1,9 @@
 
 
-use("Bookstore")
+use("Practice")
 
-db.books.find({});
+db.orders.aggregate([
+    {$match:{year:{$gt:2017}}},
+
+    {$group:{_id:"$year", totalDeliveryDays:{$sum:"$delivery_days"}}}
+])
