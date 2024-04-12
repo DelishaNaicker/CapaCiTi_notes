@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript practice examples</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+        <h1>Example 1: Swap variables</h1>
+        <p id="variables"></p>
+        <button onclick="swapVariables(x,y)">Click</button>
+
+        <h1>Example 2: Even or odd</h1>
+        <p id="evenorodd"></p>
+
+        <input type="number" id="myInput" />
+
+        <button onclick="evenOrOdd()">Click</button>
+                
+        <script>
+            let x
+            let y
+            let z
+
+            x = 5
+            y = 10
+
+            document.getElementById("variables").innerHTML = "x ="+x+ " \n\n y =" +y
+
+            function swapVariables(x, y) {
+
+                z = x;
+                x = y;
+                y = z;
+                document.getElementById("variables").innerHTML = "x ="+x+ " \n\n y =" +y
+                return x, y
+            }
+
+          function evenOrOdd() {
+            const input = document.getElementById("myInput");
+            const inputValue = input.value;
+            if (inputValue % 2 == 0) {
+              console.log(inputValue)
+              console.log(inputValue % 2)
+              document.getElementById("evenorodd").innerHTML = "This number is even"
+            }
+            else {
+              document.getElementById("evenorodd").innerHTML = "This number is odd"
+            }
+
+          }
+
+        </script>
+        
+
+</body>
+</html>
