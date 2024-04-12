@@ -10,7 +10,7 @@
   <body>
         <h1>Example 1: Swap variables</h1>
         <p id="variables"></p>
-        <button onclick="swapVariables(x,y)">Click</button>
+        <button onclick="swapVariables(x, y)">Click</button>
 
         <h1>Example 2: Even or odd</h1>
         <p id="evenorodd"></p>
@@ -29,14 +29,14 @@
             x = 5
             y = 10
 
-            document.getElementById("variables").innerHTML = "x ="+x+ " \n\n y =" +y
+            document.getElementById("variables").innerHTML = "x ="+ x + " \n\n y =" + y
 
             function swapVariables(x, y) {
 
                 z = x;
                 x = y;
                 y = z;
-                document.getElementById("variables").innerHTML = "x ="+x+ " \n\n y =" +y
+                document.getElementById("variables").innerHTML = "x ="+ x + " \n\n y =" + y
                 return x, y
             }
 
